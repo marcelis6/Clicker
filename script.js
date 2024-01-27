@@ -11,7 +11,7 @@ const BlueBlock = {
 
 Block.addEventListener("click", () => { 
     BlueBlock.hp = BlueBlock.hp -  1;
-    HpCounter.innerHTML = `Block hp: ${BlueBlock.hp}`;
+    HpCounter.innerHTML = `${BlueBlock.hp}`;
 
     if(BlueBlock.hp == 0){ 
         BlocksDestroyedCounter += 1;
