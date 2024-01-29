@@ -21,3 +21,15 @@ h1  {
 .block:active { 
     transform: scale(1);
 }
+#blockhp { 
+    display: flex;
+}
+.hp { 
+    margin-left: 5px;
+}
+#blockDestroyed { 
+ display: flex;
+}
+.destroyed { 
+    margin-left: 5px;
+}
