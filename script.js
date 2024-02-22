@@ -4,9 +4,13 @@ let BlocksDestroyed = document.querySelector(".destroyed");
 let BlocksDestroyedCounter = 0;
 let upgrade1 = document.querySelector(".doubledmg");
 let x = 1;
+
+
+
+
 const BlocksGenerator =[
-     { name:"blue", hp:5, },
-     {name:"red", hp:10}
+     { name:"blue", hp:Math.floor(Math.random()*10) + 10, },
+    
 
     ]
     
@@ -20,12 +24,34 @@ Block.addEventListener("click", () => {
     if(BlocksGenerator[0].hp <= 0){ 
         BlocksDestroyedCounter += 1;
         BlocksDestroyed.innerHTML = BlocksDestroyedCounter;
-        BlocksGenerator[0].hp = 5;
+        BlocksGenerator[0].hp = Math.floor(Math.random()*10) + 10;
         HpCounter.innerHTML = `${BlocksGenerator[0].hp}`;
-    
+        FadeOut(Block);
+        setTimeout("FadeIn(Block)", 400);
     }
 })
 upgrade1.addEventListener("click", () => { 
     x++;
 
 })
+
+function FadeOut(el){ 
+    let Opacity = 1;
+    let interval = setInterval(()=> { 
+        if (Opacity > 0) { 
+            Opacity -=0.1;
+            el.style.opacity = Opacity;
+        } else {
+            clearInterval(interval);          
+        }
+    }, 50)
+}
+function FadeIn(el){ 
+    let Opacity = 0;
+    let interval = setInterval (() =>{ 
+        if(Opacity < 1) { 
+            Opacity +=0.1;
+            el.style.opacity = Opacity;
+        } else clearInterval(interval);
+    }, 50)
+}
