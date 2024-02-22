@@ -15,7 +15,7 @@ h1  {
     transition-duration: 50ms;
 }
 .block:hover{ 
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
 .block:active { 
@@ -36,8 +36,7 @@ h1  {
 .doubledmg { 
     font-family: fantasy;
     font: bold;
-    margin-top: 50px;
-    margin-left: 50px;
+    
     background-color: black;
     border: 0px solid black;
     color: whitesmoke;
@@ -50,4 +49,19 @@ h1  {
 }
 .doubledmg:active { 
     transform: scale(0.9);
+}
+#upgrades { 
+    margin-top: 30px;
+    display: flex;
+    height: 100px;
+   justify-content: center;
+}
+.ToBuy { 
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+.Cash { 
+    display: flex;
 }

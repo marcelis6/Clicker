@@ -4,7 +4,8 @@ let BlocksDestroyed = document.querySelector(".destroyed");
 let BlocksDestroyedCounter = 0;
 let upgrade1 = document.querySelector(".doubledmg");
 let x = 1;
-
+let CashMade = document.querySelector("#CashMade");
+let Cash = 0;
 
 
 
@@ -24,6 +25,8 @@ Block.addEventListener("click", () => {
     if(BlocksGenerator[0].hp <= 0){ 
         BlocksDestroyedCounter += 1;
         BlocksDestroyed.innerHTML = BlocksDestroyedCounter;
+        Cash++;
+        CashMade.innerHTML = Cash;
         BlocksGenerator[0].hp = Math.floor(Math.random()*10) + 10;
         HpCounter.innerHTML = `${BlocksGenerator[0].hp}`;
         FadeOut(Block);
@@ -31,8 +34,12 @@ Block.addEventListener("click", () => {
     }
 })
 upgrade1.addEventListener("click", () => { 
-    x++;
-
+    if(Cash >= 2){
+        x++;
+        Cash -= 2;
+        CashMade.innerHTML = Cash;
+    } else alert("you don't have enough cash!");
+   
 })
 
 function FadeOut(el){ 
