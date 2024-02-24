@@ -7,7 +7,9 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: darkblue;
-   
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .Cashtxt { 
     background-color: darkblue;
