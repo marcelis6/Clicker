@@ -1,42 +1,8 @@
-* { 
-    margin: 0;
-    padding: 0;
-    background-color: rgb(43, 42, 42);
-}
-h1  { 
-    text-align: center;
-}
-.block { 
-    background-color: blue;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    margin-top: 10%;
-    transition-duration: 50ms;
-}
-.block:hover{ 
-    transform: scale(1.2);
-}
 
-.block:active { 
-    transform: scale(1);
-}
-#blockhp { 
-    display: flex;
-}
-.hp { 
-    margin-left: 5px;
-}
-#blockDestroyed { 
- display: flex;
-}
-.destroyed { 
-    margin-left: 5px;
-}
 .doubledmg { 
     font-family: fantasy;
     font: bold;
-    
+    margin: 10px;
     background-color: black;
     border: 0px solid black;
     color: whitesmoke;
@@ -61,9 +27,6 @@ h1  {
     display: flex;
     justify-content: center;
 
-}
-.Cash { 
-    display: flex;
 }
 .price { 
     width: 100%;

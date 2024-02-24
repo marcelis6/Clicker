@@ -1,0 +1,15 @@
+.block { 
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 10%;
+    transition-duration: 50ms;
+}
+.block:hover{ 
+    transform: scale(1.2);
+}
+
+.block:active { 
+    transform: scale(1);
+}
