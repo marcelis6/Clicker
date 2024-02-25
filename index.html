@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/cash.css">
     <link rel="stylesheet" href="css/upgrades.css">
     <link rel="icon" type="image/x-icon" href="img/ikona.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
        
@@ -20,18 +24,22 @@
         <h1>Click This block!</h1>
 
     <div class="block" > </div>
-
-    <div class="ToBuy">upgrades to buy</div>
-    <div id="upgrades">
-        <div> 
-            <button type="button" class="autoclick, doubledmg" id="upgrade2">Auto Click (1dps)</button>
-            <p class="price"> price: 100</p>
+        <button type="button" class="btnupgr upgrbtnstyle" id="btnupgr">Upgrades ></button>
+    <section class="section">
+      
+        <p class="ToBuy">upgrades to buy</p>
+        <div id="upgrades">
+            <div class="upgr"> 
+                <button type="button" class="autoclick, doubledmg" id="upgrade2">Auto Click (1dps)</button>
+                <p class="price"> price: 100</p>
+            </div>
+            <div class="upgr">
+                <button type="button" class="doubledmg" id="upgrade1"> +1 dmg</button>
+                <p class="price">price: 50</p>
+            </div>
         </div>
-        <div>
-        <button type="button" class="doubledmg" id="upgrade1"> +1 dmg</button>
-        <p class="price">price: 50</p>
-        </div>
-    </div>
+          
+    </section>
     <script src="script.js"></script>
 </body>
 </html>
