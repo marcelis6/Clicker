@@ -3,8 +3,9 @@
     font-family: "Comic Neue", cursive;
     font: bold;
     margin: 10px;
-    background-color: black;
-    border: 0px solid black;
+    background-color:393E46;
+    border: 1px solid black;
+    border-radius: 5px;
     color: whitesmoke;
     width: 100px;
     height: 50px;
@@ -21,7 +22,9 @@
     display: flex;
     height: 100px;
    justify-content: center;
-   background-color: bisque;
+   background-color:    #00ADB5;
+   display: flex;
+   flex-wrap: wrap;
 }
 .ToBuy { 
     font-family: "Comic Neue", cursive;
@@ -32,7 +35,7 @@
     margin-top: 30px;
     display: flex;
     justify-content: center;
-    background-color: bisque;
+    background-color:  #00ADB5;
 
 }
 .price { 
@@ -41,8 +44,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color:  #00ADB5;
 }
 .upgr { 
-    background-color: bisque;
+    background-color:  #00ADB5;
 }

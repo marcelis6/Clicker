@@ -26,14 +26,14 @@ upgradebtn.addEventListener("click", ()=> {
         upgrades.classList.toggle("fadedin");
         upgradebtn.classList.remove("btnupgr");
         upgradebtn.classList.toggle("btnupgr2");
-        upgradebtn.innerHTML = "Upgrades <";
+        upgradebtn.innerHTML = "<";
         upgrbtn++;
     } else { 
         upgrades.classList.toggle("section");
         upgrades.classList.remove("fadedin");
         upgradebtn.classList.toggle("btnupgr");
         upgradebtn.classList.remove("btnupgr2");
-        upgradebtn.innerHTML = "Upgrades >";
+        upgradebtn.innerHTML = ">";
         upgrbtn--;
     }
     
