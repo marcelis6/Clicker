@@ -11,8 +11,6 @@ let upgrbtn = 0;
 
 const BlocksGenerator =[
      { name:"blue", },
-    
-
     ]
     
 Block.addEventListener("click", () => { 
@@ -22,17 +20,13 @@ Block.addEventListener("click", () => {
 
 upgradebtn.addEventListener("click", ()=> { 
     if(upgrbtn == 0){
-        upgrades.classList.remove("section");
-        upgrades.classList.toggle("fadedin");
-        upgradebtn.classList.remove("btnupgr");
-        upgradebtn.classList.toggle("btnupgr2");
+        upgradebtn.style.setProperty("left", "250px");
+        upgrades.style.setProperty("left", "-10px");
         upgradebtn.innerHTML = "<";
         upgrbtn++;
     } else { 
-        upgrades.classList.toggle("section");
-        upgrades.classList.remove("fadedin");
-        upgradebtn.classList.toggle("btnupgr");
-        upgradebtn.classList.remove("btnupgr2");
+        upgradebtn.style.setProperty("left", "10px");
+        upgrades.style.setProperty("left", "-250px");
         upgradebtn.innerHTML = ">";
         upgrbtn--;
     }
