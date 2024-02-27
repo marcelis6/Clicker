@@ -4,6 +4,8 @@ const CashMade = document.querySelector("#CashMade");
 const upgrade2 = document.querySelector("#upgrade2");
 const upgradebtn = document.querySelector("#btnupgr");
 const upgrades = document.querySelector(".section");
+const btnquerymobile = window.matchMedia('(max-width:500px)');
+const widthx = window.innerWidth;
 let x = 1;
 let Cash = 0;
 let dps = 0;
@@ -13,14 +15,26 @@ const BlocksGenerator =[
      { name:"blue", },
     ]
     
+
+
+
 Block.addEventListener("click", () => { 
    CashAdd();
     
 })
 
+
+
+window.addEventListener("load", () => { 
+    if (widthx <= 600){ 
+        
+    }
+  
+})
+
 upgradebtn.addEventListener("click", ()=> { 
-    if(upgrbtn == 0){
-        upgradebtn.style.setProperty("left", "250px");
+    if(upgrbtn == 0 ){
+        upgradebtn.style.setProperty("left", "200px");
         upgrades.style.setProperty("left", "-10px");
         upgradebtn.innerHTML = "<";
         upgrbtn++;
@@ -58,3 +72,4 @@ setInterval(()=>{
     Cash = Cash + dps;
     CashMade.innerHTML = Cash;
 }, 1000)
+
