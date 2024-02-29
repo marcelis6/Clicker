@@ -9,8 +9,11 @@ const widthx = window.innerWidth;
 let x = 1;
 let Cash = 0;
 let dps = 0;
-let upgrbtn = 0;
-
+let upgrbtn = false;
+let i;
+let j;
+let k;
+let l;
 const BlocksGenerator =[
      { name:"blue", },
     ]
@@ -26,26 +29,25 @@ Block.addEventListener("click", () => {
 
 
 window.addEventListener("load", () => { 
-    if (widthx <= 600){ 
-        
-    }
+   if(widthx >= 1400){ 
+    i = 300;
+    j = -10;
+    k = 10;
+    l = -500;
+   } else if(widthx >= 800) { 
+    i = 195;
+    j = -10;
+    k = 10
+    l = -250
+   } else if (widthx >= 100) { 
+    i = 170;
+    j = -10;
+    k = 10;
+    l = -250;
+   }
   
 })
 
-upgradebtn.addEventListener("click", ()=> { 
-    if(upgrbtn == 0 ){
-        upgradebtn.style.setProperty("left", "200px");
-        upgrades.style.setProperty("left", "-10px");
-        upgradebtn.innerHTML = "<";
-        upgrbtn++;
-    } else { 
-        upgradebtn.style.setProperty("left", "10px");
-        upgrades.style.setProperty("left", "-250px");
-        upgradebtn.innerHTML = ">";
-        upgrbtn--;
-    }
-    
-})
 
 
 
@@ -73,3 +75,36 @@ setInterval(()=>{
     CashMade.innerHTML = Cash;
 }, 1000)
 
+ 
+    upgradebtn.addEventListener("click", ()=> { 
+        leftslide(i,j,k,l);
+    })
+    
+
+/* upgradebtn.addEventListener("click", ()=> { 
+    if(upgrbtn == 0 ){
+        upgradebtn.style.setProperty("left", "200px");
+        upgrades.style.setProperty("left", "-10px");
+        upgradebtn.innerHTML = "<";
+        upgrbtn++;
+    } else { 
+        upgradebtn.style.setProperty("left", "10px");
+        upgrades.style.setProperty("left", "-250px");
+        upgradebtn.innerHTML = ">";
+        upgrbtn--;
+    }
+    
+}) */
+function leftslide(i,j,k,l){
+    if(upgrbtn == false ){
+        upgradebtn.style.setProperty("left", `${i}` + "px");
+        upgrades.style.setProperty("left", `${j}` + "px");
+        upgradebtn.innerHTML = "<";
+        upgrbtn = true;
+    } else { 
+        upgradebtn.style.setProperty("left", `${k}` + "px");
+        upgrades.style.setProperty("left", `${l}` + "px");
+        upgradebtn.innerHTML = ">";
+        upgrbtn = false;
+    }
+}
