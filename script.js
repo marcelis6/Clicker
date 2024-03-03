@@ -7,6 +7,7 @@ const upgrades = document.querySelector(".section");
 const btnquerymobile = window.matchMedia('(max-width:500px)');
 const upgrdhtml = document.querySelector("#clickupgrd");
 const dpsupgrdhtml = document.querySelector("#dpsupgrd");
+const audio = document.querySelector("#a");
 const widthx = window.innerWidth;
 
 let clickupgrd = 50;
@@ -33,6 +34,10 @@ Block.addEventListener("click", () => {
     
 })
 
+
+window.addEventListener("load", play);
+window.addEventListener("click", play)
+function play(){ audio.play()}
 
 
 window.addEventListener("load", () => { 
