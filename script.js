@@ -5,7 +5,14 @@ const upgrade2 = document.querySelector("#upgrade2");
 const upgradebtn = document.querySelector("#btnupgr");
 const upgrades = document.querySelector(".section");
 const btnquerymobile = window.matchMedia('(max-width:500px)');
+const upgrdhtml = document.querySelector("#clickupgrd");
+const dpsupgrdhtml = document.querySelector("#dpsupgrd");
 const widthx = window.innerWidth;
+
+let clickupgrd = 50;
+let upgrounded = Math.ceil(clickupgrd);
+let dpsupgrd = 100;
+let dpsupgrdround = Math.ceil(dpsupgrd);
 let x = 1;
 let Cash = 0;
 let dps = 0;
@@ -52,18 +59,24 @@ window.addEventListener("load", () => {
 
 
 upgrade1.addEventListener("click", () => { 
-    if(Cash >= 50){
+    if(Cash >= clickupgrd){
         x++;
         Cash -= 50;
+        clickupgrd *= 1.11;
+        upgrounded = Math.ceil(clickupgrd);
         CashMade.innerHTML = Cash;
+        upgrdhtml.innerHTML = "price:" + ` ${upgrounded}`;
     } else alert("you don't have enough cash!");
    
 })
 upgrade2.addEventListener("click", ()=> {
-    if(Cash >= 100){
+    if(Cash >= dpsupgrd){
         dps++;
         Cash -= 100;
+        dpsupgrd*= 1.11;
+        dpsupgrdround = Math.ceil(dpsupgrd);
         CashMade.innerHTML = Cash;
+        dpsupgrdhtml.innerHTML = "price:" + ` ${dpsupgrdround}`;
     } else alert("you don't have enough cash!");
 })
 function CashAdd(){ 
